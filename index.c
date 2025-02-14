@@ -1,7 +1,7 @@
 //This is a tic tac toe game written in C
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+// #include <ctype.h>
 #include <time.h>
 
 char board[3][3];
