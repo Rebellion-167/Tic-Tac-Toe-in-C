@@ -5,8 +5,11 @@
 #include <time.h>
 
 char board[3][3];
-const char PLAYER = 'X';
-const char COMPUTER = 'O';
+
+char PLAYER ;
+char COMPUTER ;
+
+
 
 void resetBoard();
 void printBoard();
@@ -15,9 +18,11 @@ void playerMove();
 void computerMove();
 char checkWinner();
 void printWinner(char);
+void chooseSymbol();
 
 int main()
 {
+    chooseSymbol();
     char winner = ' ';
     char response = ' ';
 
@@ -202,4 +207,16 @@ void printWinner(char winner)
     {
         printf("It's a tie!\n");
     }
+}
+
+void chooseSymbol()
+{
+    printf("Enter the symbol u want to choose (X/O):");
+    scanf("%c", &PLAYER);
+
+    if(PLAYER == 'X')
+        COMPUTER = 'O';
+    else
+        COMPUTER = 'X';
+
 }
