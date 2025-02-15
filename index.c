@@ -50,9 +50,9 @@ int main()
         printWinner(winner);
 
         printf("\nWould you like to play again? (Y/N): ");
+        scanf("\n");
         scanf("%c", &response);
-        scanf("%c");
-    } while (response == 'Y');
+        } while (response == 'Y');
     
     printf("\nThank you for playing!\n");
 
